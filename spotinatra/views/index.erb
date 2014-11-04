@@ -1,0 +1,18 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <form action="songs/new" method="POST">
+	        Which song would you like to listen?
+	        <input name="song_name" type="text">
+	        Which artist would you like to listen?
+	        <input name="artist_name" type="text">
+	        <input type="submit">
+        </form>
+        <ul>
+        	<% @@song_list.each do |song| %>
+        		<li> <%= song.first %> - <%= song.last %></li>
+        	<% end %>
+        </ul>
+    </body>
+</html>
